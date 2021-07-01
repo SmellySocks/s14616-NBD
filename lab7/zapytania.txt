@@ -1,0 +1,19 @@
+1. curl -i -XPUT -H "Content-Type: application/json" -d "{\"first_name\":\"Joni\",\"last_name\":\"Heister\",\"age\":25,\"has_car\":false}" http://localhost:8098/buckets/s14616/keys/joni
+curl -i -XPUT -H "Content-Type: application/json" -d "{\"first_name\":\"Charlotte\",\"last_name\":\"Thome\",\"age\":92,\"has_car\":false}" http://localhost:8098/buckets/s14616/keys/charlotte
+curl -i -XPUT -H "Content-Type: application/json" -d "{\"first_name\":\"Wain\",\"last_name\":\"Balaizot\",\"age\":9,\"has_car\":false}" http://localhost:8098/buckets/s14616/keys/wain
+curl -i -XPUT -H "Content-Type: application/json" -d "{\"first_name\":\"Clementina\",\"last_name\":\"Stitfall\",\"age\":62,\"has_car\":true}" http://localhost:8098/buckets/s14616/keys/clementina
+curl -i -XPUT -H "Content-Type: application/json" -d "{\"first_name\":\"Michal\",\"last_name\":\"Hyla\",\"age\":25,\"has_car\":true}" http://localhost:8098/buckets/s14616/keys/mhyla
+
+2.curl -i http://localhost:8098/buckets/s14616/keys/mhyla
+3.curl -i -XPUT -H "Content-Type: application/json" -d "{\"first_name\":\"Michal\",\"last_name\":\"Hyla\",\"age\":25,\"has_car\":true, \"beers_today\":4}" http://localhost:8098/buckets/s14616/keys/mhyla
+4.curl -i -XPUT -H "Content-Type: application/json" -d "{\"first_name\":\"Michal\",\"last_name\":\"Hyla\",\"age\":25}" http://localhost:8098/buckets/s14616/keys/mhyla
+5.curl -i -XPUT -H "Content-Type: application/json" -d "{\"first_name\":\"Clementina\",\"last_name\":\"Stitfall\",\"age\":62,\"has_car\":false}" http://localhost:8098/buckets/s14616/keys/clementina
+6.curl -i -XDELETE http://localhost:8098/buckets/s14616/keys/joni
+7.curl -i http://localhost:8098/buckets/s14616/keys/joni
+8.curl -i -XPOST -H "Content-Type: application/json" -d "{\"first_name\":\"jajco\"}" http://localhost:8098/buckets/s14616/keys/
+9.curl -i http://localhost:8098/buckets/s14616/keys/NlxW487vezftyb5h7lmdpGqebBJ
+10.curl -i -XDELETE http://localhost:8098/buckets/s14616/keys/NlxW487vezftyb5h7lmdpGqebBJ > wynik10.txt
+
+
+
+

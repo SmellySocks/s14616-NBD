@@ -1,0 +1,68 @@
+﻿[
+  {
+    "a": {
+"identity": 342,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"name": "Chris Evans",
+"born": 1981
+      }
+    },
+    "m": {
+"identity": 340,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"tagline": "i dunno",
+"title": "Captain America: The First Avenger",
+"released": 2011
+      }
+    },
+    "d": {
+"identity": 341,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"name": "Joe Johnston",
+"born": 1964
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 343,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"name": "Samuel L. Jackson",
+"born": 1948
+      }
+    },
+    "m": {
+"identity": 340,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"tagline": "i dunno",
+"title": "Captain America: The First Avenger",
+"released": 2011
+      }
+    },
+    "d": {
+"identity": 341,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"name": "Joe Johnston",
+"born": 1964
+      }
+    }
+  }
+]

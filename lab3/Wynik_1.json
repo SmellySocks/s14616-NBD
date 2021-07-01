@@ -1,0 +1,30 @@
+[
+  {
+    "_id": {"$oid": "60da4003c0adc019cc8b3368"},
+    "birth_date": "1990-11-05T07:39:24Z",
+    "credit": [
+      {
+        "type": "maestro",
+        "number": "5217888987954209",
+        "currency": "SEK",
+        "balance": "4979.53"
+      }
+    ],
+    "description": "nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est",
+    "email": "haustina@comcast.net",
+    "first_name": "Helen",
+    "height": "171.01",
+    "job": "Chief Design Engineer",
+    "last_name": "Austin",
+    "location": {
+      "city": "Banjar Parekan",
+      "address": {
+        "streetname": "Arkansas",
+        "streetnumber": "4142"
+      }
+    },
+    "nationality": "Indonesia",
+    "sex": "Female",
+    "weight": "68.53"
+  }
+]

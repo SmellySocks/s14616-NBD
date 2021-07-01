@@ -1,0 +1,12 @@
+[
+  {
+    "_id": "Female",
+    "avgHeight": {"$numberDecimal": 166.8126091370558375634517766497462},
+    "avgWeight": {"$numberDecimal": 70.11331573604060913705583756345178}
+  },
+  {
+    "_id": "Male",
+    "avgHeight": {"$numberDecimal": 166.7384837472239047042196648495861},
+    "avgWeight": {"$numberDecimal": 70.01610135271552594387240056531395}
+  }
+]

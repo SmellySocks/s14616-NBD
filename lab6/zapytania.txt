@@ -1,0 +1,45 @@
+1. MATCH (p:peak{name:'Sandakphu'}), (t:town{name:'Darjeeling'}) 
+ MATCH path = ShortestPath((p)-[*..5]-(t))
+ RETURN path
+
+2.MATCH (p:peak{name:'Sandakphu'}),(t:town{name:'Darjeeling'}) 
+ MATCH path = allShortestPaths((p)-[*]-(t))
+ WHERE ALL (m IN relationships(path) WHERE m.winter="true")
+ RETURN path
+
+3. 
+
+4. MATCH (:Flight)-[o:ORIGIN]->(a:Airport) RETURN a, count(o) ORDER BY count(o) DESC
+
+5. MATCH p = (origin:Airport { name:"LAX" })<-[r1:ORIGIN]-(:Flight)-[r2:DESTINATION*..10]->(destination:Airport)
+WHERE REDUCE(acc = 0, n IN [x IN NODES(p) WHERE 'Flight' IN LABELS(x)] |
+  acc + [(n)<-[:ASSIGN]-(ticket) | ticket.price][0]
+  ) < 3000
+RETURN p
+
+6. MATCH p = (origin:Airport { name:"LAX" })<-[r1:ORIGIN]-(:Flight)-[r2:DESTINATION*..10]->(destination:Airport)
+WITH p,  REDUCE(acc = 0, n IN [x IN NODES(p) WHERE 'Flight' IN LABELS(x)] | acc + [(n)<-[:ASSIGN]-(ticket) | ticket.price][0]
+  ) AS cena
+RETURN p, cena ORDER BY cena asc
+
+7. MATCH p = (origin:Airport { name:"LAX" })<-[r1:ORIGIN]-(:Flight)-[r2:DESTINATION*..10]->(destination:Airport {name:"DAY"})
+WITH p,  REDUCE(acc = 0, n IN [x IN NODES(p) WHERE 'Flight' IN LABELS(x)] | acc + [(n)<-[:ASSIGN]-(ticket) | ticket.price][0]
+  ) AS cena
+RETURN p, cena ORDER BY cena asc LIMIT 1
+
+8. MATCH p = (origin:Airport { name:"LAX" })<-[r1:ORIGIN]-(t:Flight)-[r2:DESTINATION*..10]->(destination:Airport {name:"DAY"})
+WHERE t.class="business"
+WITH p,  REDUCE(acc = 0, n IN [x IN NODES(p) WHERE 'Flight' IN LABELS(x)] | acc + [(n)<-[:ASSIGN]-(ticket) | ticket.price][0]
+  ) AS cena
+RETURN p, cena ORDER BY cena asc LIMIT 1
+
+9. NIE MAM POJĘCIA, STACKOVERFLOW TEŻ NIE
+
+10. MATCH p = (a1:Airport)<-[r1:ORIGIN]-(f1:Flight)-[r2:DESTINATION]->(a2:Airport)<-[r3:ORIGIN]-(f2:Flight)-[r4:DESTINATION]->(a3:Airport)
+WHERE a1<>a2<>a3<>a1
+WITH p, REDUCE(acc = 0, n IN [x IN NODES(p) WHERE 'Flight' IN LABELS(x)] |
+  acc + [(n)<-[:ASSIGN]-(ticket {class: 'economy'}) | ticket.price][0]
+  ) as cena
+RETURN p, cena
+ORDER BY cena asc LIMIT 1
+

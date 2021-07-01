@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvrc7V7caIpTImMfK8GZ90C2+LAA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s14616>; rel="up"
+Last-Modified: Thu, 01 Jul 2021 21:30:20 GMT
+ETag: "7OufTW1weGnCo7ja4bhn8C"
+Date: Thu, 01 Jul 2021 21:33:57 GMT
+Content-Type: application/json
+Content-Length: 66
+
+{"first_name":"Michal","last_name":"Hyla","age":25,"has_car":true}
